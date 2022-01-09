@@ -19,6 +19,18 @@ Every time a new square is filled in or left empty, we check the hints on the le
 
 ![recursive backtracking 2](https://user-images.githubusercontent.com/68373215/148687185-8a85c4c4-fca3-42be-8d95-74b47de2a9ec.png)
 
+#### Complexity
+
+the time complexity of this algorithm is **O(2^n)**. The maximum possible steps this algorithm can take is the amount of possible combinations of a nonogram puzzle.
+
+Nonograms are usually `n x n` grids where `n` is a multiple of 5.
+
+ - 5x5 puzzle is 2^25 combinations = 33'554'432.
+ - 10x10 puzzle is 1.267 x 10^30
+ - 15x15 puzzle is 5.392 x 10^67
+
+This algorithm's speed drastically changes depending if it can guess the first squares correctly. If it makes a mistake on the first square it will have to redo the whole process again. But when it guesses the first one correctly it throws out 1/2 of the possible path it can go to.
+
 ## Filling in free squares at the start
 
 Before we start using an algorithm we can check if there are any squares in the puzzle that will always be either filled or empty.
@@ -37,6 +49,8 @@ My implementation uses 3 of these methods:
 
 ## Comparison
 
+(note: it may seem that the animation suddenly starts and ends midway through the solving. But in reality it solved the first and end segment quickly and got stuck in the middle)
+
 #### Recursive Backtracking
 
 ![RecursiveBacktracking](https://user-images.githubusercontent.com/68373215/148688477-45dac260-8999-4736-8f18-6a019d0b3a3d.gif)
@@ -45,3 +59,4 @@ My implementation uses 3 of these methods:
 
 ![ImprovedRecursiveBacktracking](https://user-images.githubusercontent.com/68373215/148688504-46f5762a-5348-4a99-bf8a-905744ef9974.gif)
 
+Recursive backtracking and its improved versions are able to do 40x40 puzzles without much trouble but its usually impossible to do 45x45 puzzles as its complexity becomes too big at that point
