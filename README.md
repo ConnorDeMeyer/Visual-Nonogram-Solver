@@ -35,3 +35,13 @@ My implementation uses 3 of these methods:
 
 ![FreeSquares3](https://user-images.githubusercontent.com/68373215/148687117-3d6c871e-8cd5-4a98-ba21-3189f06f3c3e.png)
 
+## Comparison
+
+#### Recursive Backtracking
+
+![RecursiveBacktracking](https://user-images.githubusercontent.com/68373215/148688477-45dac260-8999-4736-8f18-6a019d0b3a3d.gif)
+
+#### Improved Recursive Backtracking (with free squares at start)
+
+![ImprovedRecursiveBacktracking](https://user-images.githubusercontent.com/68373215/148688504-46f5762a-5348-4a99-bf8a-905744ef9974.gif)
+
