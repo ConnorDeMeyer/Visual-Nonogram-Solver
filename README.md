@@ -14,8 +14,8 @@ To understand Recursive Backtracking in a nonogram puzzle you can imagine a bina
 
 ![recursive backtracking 1](https://user-images.githubusercontent.com/68373215/148687196-deedc72e-cce3-410c-9c86-3b687a0b141e.png)
 
-The algorithm will go over follow each path until it reaches either a non valid square that doesn't work with the puzzle or the end, which finishes the algorithm.
-Every time a new square is filled in or left empty, we check the hints on the left and top sides to check if there is still a possible solution. Once it finds a square that doesn't fit, it will 'prune' the remaining possible paths following that square. Then it will do the same with the other value (filled/empty) and if that one also doesn't fit it means that one of the previous squares must be wrong and the one before it must change. 
+The algorithm will follow each path until it reaches either a non valid square that contradicts the hints of the puzzle or it reaches the end, which finishes the algorithm.
+Every time a new square is filled in or left empty, we check the hints on the left and top sides to check if there is still a possible solution. Once it finds a square that doesn't fit, it will _prune_ the remaining possible paths following that square. Then it will do the same with the other value (filled/empty) and if that one also doesn't fit it means that one of the previous squares must be wrong and the one before it must change. 
 
 ![recursive backtracking 2](https://user-images.githubusercontent.com/68373215/148687185-8a85c4c4-fca3-42be-8d95-74b47de2a9ec.png)
 
@@ -59,4 +59,4 @@ My implementation uses 3 of these methods:
 
 ![ImprovedRecursiveBacktracking](https://user-images.githubusercontent.com/68373215/148688504-46f5762a-5348-4a99-bf8a-905744ef9974.gif)
 
-Recursive backtracking and its improved versions are able to do 40x40 puzzles without much trouble but its usually impossible to do 45x45 puzzles as its complexity becomes too big at that point
+Recursive backtracking and its improved versions are able to do 40x40 puzzles without much trouble but its usually impossible to do 45x45 puzzles as the time complexity becomes too big at that point
