@@ -33,5 +33,5 @@ My implementation uses 3 of these methods:
 
 3. If there is a filled in square somewhere and the distance between that square and a side is smaller than a first/last hint depending on the side, you can continue those squares like in the image below. If there is only 1 hint in that row/column you can mark the other squares as _impossible_ squares.
 
-![FreeSquares3](img src="https://user-images.githubusercontent.com/68373215/148686643-428a6f8f-5fcd-4a3b-9efc-738973d762f5.png" width="570")
+![FreeSquares3]<img src="https://user-images.githubusercontent.com/68373215/148686643-428a6f8f-5fcd-4a3b-9efc-738973d762f5.png" width="570">
 
