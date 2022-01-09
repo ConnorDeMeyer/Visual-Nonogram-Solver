@@ -12,12 +12,12 @@ The first implemented solving algorithm is called [Recursive Backtracking](https
 
 To understand Recursive Backtracking in a nonogram puzzle you can imagine a binary tree where the first level of nodes is the first square and the levels beneath are the subsequent squares.
 
-![recursive backtracking 1](https://user-images.githubusercontent.com/68373215/148685623-16f2b988-17ea-4b51-ab1d-7e8f52d3d576.png)
+![recursive backtracking 1](https://user-images.githubusercontent.com/68373215/148687196-deedc72e-cce3-410c-9c86-3b687a0b141e.png)
 
 The algorithm will go over follow each path until it reaches either a non valid square that doesn't work with the puzzle or the end, which finishes the algorithm.
 Every time a new square is filled in or left empty, we check the hints on the left and top sides to check if there is still a possible solution. Once it finds a square that doesn't fit, it will 'prune' the remaining possible paths following that square. Then it will do the same with the other value (filled/empty) and if that one also doesn't fit it means that one of the previous squares must be wrong and the one before it must change. 
 
-![recursive backtracking 2](https://user-images.githubusercontent.com/68373215/148685627-dbd2dfe1-a70a-444a-81c6-27a78f42e869.png)
+![recursive backtracking 2](https://user-images.githubusercontent.com/68373215/148687185-8a85c4c4-fca3-42be-8d95-74b47de2a9ec.png)
 
 ## Filling in free squares at the start
 
@@ -29,7 +29,7 @@ My implementation uses 3 of these methods:
 
 2. If you look at all possible combinations of a row/column you can take the intersection of those combinations and receive a list of squares that will always be filled.
 
-![FreeSquares2](https://user-images.githubusercontent.com/68373215/148686484-0bebe769-5fe8-4773-b8b7-5204a6aefcb7.png)
+![FreeSquares2](https://user-images.githubusercontent.com/68373215/148687175-c658623c-1c36-4170-b92c-88c1a02229d2.png)
 
 3. If there is a filled in square somewhere and the distance between that square and a side is smaller than a first/last hint depending on the side, you can continue those squares like in the image below. If there is only 1 hint in that row/column you can mark the other squares as _impossible_ squares.
 
