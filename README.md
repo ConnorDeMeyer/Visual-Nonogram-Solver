@@ -59,4 +59,4 @@ My implementation uses 3 of these methods:
 
 ![ImprovedRecursiveBacktracking](https://user-images.githubusercontent.com/68373215/148688504-46f5762a-5348-4a99-bf8a-905744ef9974.gif)
 
-Recursive backtracking and its improved versions are able to do 40x40 puzzles without much trouble but its usually impossible to do 45x45 puzzles as the time complexity becomes too big at that point
+Recursive backtracking and its improved versions are able to do 40x40 puzzles without much trouble but it is usually impossible to do 45x45 puzzles as the time complexity becomes too big
